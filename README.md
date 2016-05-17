@@ -25,3 +25,9 @@ wget http://files.omdistro.org/releases/centos_rhel/omd-1.10-rh61-31.x86_64.rpm
 ```bash
 vagrant up
 ```
+##### Omd admin panel
+```bash
+http://192.168.33.10/prod/
+username = omdadmin
+password = omd
+
