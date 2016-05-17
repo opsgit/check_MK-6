@@ -30,4 +30,21 @@ vagrant up
 http://192.168.33.10/prod/
 username = omdadmin
 password = omd
+```
+### Check_mk Agent
+##### Change working directory
+```bash
+cd check_MK/check_mk_agent
+```
+##### Download omd package
+```bash
+sudo wget http://mathias-kettner.de/download/check_mk-1.1.12p7.tar.gz
+```
+##### Provision vagrant box
+```bash
+vagrant up
+```
+
+
+
 
