@@ -1,15 +1,17 @@
 #!/bin/bash
 
-# #
 sudo yum update -y 
 # Installing the check_mk agent 
-sudo yum install -y check-mk-agent
-
-# create check_mk under /etc/xinetd.d
-sudo mkdir -p /etc/xinetd.d
+sudo yum install xinetd -y 
+tar -xvzf /vagrant/check_mk-1.1.12p7.tar.gz
+cd check_mk-1.1.12p7
+tar -xvzf agents.tar.gz
 touch /etc/xinetd.d/check_mk
-cp /vagrant/check_mk /etc/xinetd.d/check_mk
+sudo cp /vagrant/check_mk /etc/xinetd.d/check_mk
+sudo cp check_mk_agent.linux /usr/bin/check_mk_agent
+sudo chmod +x /usr/bin/check_mk_agent
 
-# Restart 
-/etc/init.d/xinetd restart
-chkconfig xinetd on
+# Start
+sudo service xinetd stop && sudo service xinetd start
+sudo chkconfig xinetd on
+
