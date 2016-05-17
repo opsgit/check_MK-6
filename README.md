@@ -6,7 +6,7 @@ http://mathias-kettner.com/check_mk.html
 #### Official documentation (Wiki)
 https://mathias-kettner.de/checkmk.html
 
-#### Procedure : Getting Started 
+#### Getting Started 
 We assume that you have setup vagrant correctly and its working fine.
 
 ##### Clone the repo
